@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Prime</title>
+</head>
+<body>
+<script>
+    function isPrime(number) {
+        let flag = true;
+        for (let i = 2; i < number; i++) {
+            if(number % i === 0){
+                flag = false;
+            }
+        }
+
+        return flag;
+    }
+
+    function showListPrime(min, max) {
+        for (let i = min; i <= max ; i++) {
+            if(isPrime(i)){
+                document.write("Prime: "+i+"<br>");
+            }
+        }
+    }
+
+    let min = +prompt("Input Min");
+    let max = +prompt("Input Max");
+    showListPrime(min,max);
+
+</script>
+</body>
+</html>
